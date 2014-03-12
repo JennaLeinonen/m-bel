@@ -1,0 +1,179 @@
+Verkkokaupan SQL plääni
+
+
+
+http://www.theseus.fi/bitstream/handle/10024/25376/ramstedt_pirjo.pdf?sequence=1
+
+// tuotejutut:
+
+tuoteperhe
+	tuoteperheid,
+	tuoteperhenimi
+	
+	
+tuote
+	tuoteid,
+	tuotenimi
+	tuoteperheid,
+	tuoteryhmaid,
+	hinta,
+	saldotyyppi,
+	saldo,
+	kuvaurl
+	
+tuoteryhma
+	tuoteryhmaid,
+	tuoteryhmanimi
+	
+
+ESIM:
+	
+	
+tuoteperhe
+	1111,
+	Gloria vuodesohva 
+	
+	
+tuote
+	1111r,
+	Gloria vuodesohva punainen
+	1111,
+	11,
+	3444,
+	?,
+	?,
+	images/1111r.jpg
+	
+tuoteryhma
+	1111,
+	Sohvat
+	
+
+	
+
+	
+	
+//User
+
+
+userip
+	id,
+	userid,
+	ip,
+	pvm
+	
+users
+	password,
+	email,
+	name,
+	address,
+	phone,
+	zip,
+	city,
+	id,
+	regdate,
+	ipaddress,
+	registered
+	
+	
+
+ESIM
+
+userip
+	123456789asd,
+	kissanainen,
+	42.263.225.111,
+	2014-02-15 		//tarkista onko tämä järjestys
+	
+users
+	ddMTkHhmThl98a6ZJ52DqLr88zvTmWkU0BviaZI6KFdzgSQxgm8NlaOqehoYScltBPg5DtoNMr6ajATr41J1g1VgasFJcpEYebyT5Tgs47Q				//cryptatty,
+	a@b.fi,
+	Heikki Huuhaa,
+	Puppumäki 1 A 1,
+	01478,
+	Karkkila,
+	123456789asd,	// vaiko kissanainen
+	2014-02-15,
+	42.555.223.211, //current
+	YES				//??	
+	
+	
+	
+// ORDER
+	
+	
+orders
+	orderid,
+	date,
+	userid,
+	totalsum,
+	toimituskulut,
+	alv
+
+	
+orderitems
+	orderid
+	tuoteid
+	quantity,
+	price,
+	id,
+	orderdate,
+	deliverydate,
+	status
+	
+tilauksenstatukset
+	id,
+	orderitemid,
+	statusid,
+	pvm
+	
+statukset
+	statusid
+	kuvaus
+	
+	
+ESIM:
+
+orders
+	6sd4f664g5ds,
+	2014-03-16,
+	kissanainen,		//vaiko se 123456789asd
+	5155,
+	155,
+	6%					//en jaksanu laskee
+	
+	
+	
+orderitems
+	6sd4f664g5ds,
+	1111r,
+	1,
+	3444,
+	??,
+	2014-03-16,
+	2014-04-16,
+	ei lähetetty
+	
+tilauskenstatukset
+	??,
+	2014-03-16,
+	a10,
+	??
+	
+statukset
+	a10,
+	ei lähetetty
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
