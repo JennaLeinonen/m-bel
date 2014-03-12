@@ -1229,7 +1229,7 @@ margin-top:-4px;  /*ASEMOIN LOGO*/
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 56.0em) {  /*TOP-BAR MEDIA QUERY MUUTOS TOIMII, alkuperäinen 40.063em*/
   .top-bar {
     background: #333333;
     *zoom: 1;
@@ -1644,7 +1644,7 @@ button, .button {
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #f04124; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 56em) { /* muutettu 40.063em suuremmakis*/
   button, .button {
     display: inline-block; } }
 .button-group {
