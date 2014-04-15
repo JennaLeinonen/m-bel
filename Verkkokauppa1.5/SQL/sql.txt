@@ -1,0 +1,59 @@
+
+CREATE TABLE tuoteryhma(
+	tuoteryhmaid CHAR(4),
+	tuoteryhmanimi TEXT,
+	PRIMARY KEY(tuoteryhmaid)
+);
+
+
+INSERT INTO tuoteryhma VALUES(
+	'S112',
+	'Sohvat'
+);
+
+CREATE TABLE tuoteperhe(
+	tuoteperheid CHAR(4),
+	tuoteperhenimi TEXT,
+	tuoteperheurl TEXT,
+	PRIMARY KEY(tuoteperheid)
+);
+
+
+INSERT INTO tuoteperhe VALUES(
+	'SA12',
+	'Ainosohvat',
+	'ainosohvat.jpg'
+);
+
+
+CREATE TABLE tuote(
+	tuoteid CHAR(8),
+	tuotenimi TEXT,
+	tuoteperheid CHAR(4),
+	tuoteryhmaid CHAR(4),
+	hinta DECIMAL,
+	saldotyyppi TEXT,
+	saldo INT,
+	kuvaurl TEXT,
+	FOREIGN KEY(tuoteperheid) REFERENCES tuoteperhe(tuoteperheid),
+	FOREIGN KEY(tuoteryhmaid) REFERENCES tuoteryhma(tuoteryhmaid),
+	PRIMARY KEY(tuoteid)
+	
+);
+	
+
+
+INSERT INTO tuote VALUES(
+	'12345678',
+	'testituote',
+	'SA12',
+	'S112',
+	100,
+	'saldottyppi',
+	1,
+	'tulip.jpg'
+	
+);
+	
+
+

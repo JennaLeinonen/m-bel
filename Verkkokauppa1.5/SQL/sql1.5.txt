@@ -1,0 +1,143 @@
+
+CREATE TABLE tuoteryhma(
+	tuoteryhmaid CHAR(4),
+	tuoteryhmanimi TEXT,
+	PRIMARY KEY(tuoteryhmaid)
+);
+
+
+INSERT INTO tuoteryhma VALUES(
+	'S112',
+	'Sohvat'
+);
+
+CREATE TABLE tuoteperhe(
+	tuoteperheid CHAR(4),
+	tuoteperhenimi TEXT,
+	tuoteperheslogan TEXT,
+	tuoteperhekuvaus TEXT,
+	tuoteperhehinta DECIMAL,
+	tuoteperhekuva TEXT,
+	tuoteryhmaid CHAR(4),
+	FOREIGN KEY(tuoteryhmaid) REFERENCES tuoteryhma(tuoteryhmaid),
+	PRIMARY KEY(tuoteperheid)
+);
+
+
+INSERT INTO tuoteperhe VALUES(
+	'S002',
+	'Tasapohja sohva',
+	'tasaista menoa',
+	'Cotton candy I ish lollipop  Csh tart pie macaroon bear claw',
+	102,
+	'S002.jpg',
+	'S112'
+);
+
+INSERT INTO tuoteperhe VALUES(
+	'S003',
+	'Retro',
+	'90-luvulle',
+	'cotton candy jujubes. I love I love powder marshmallow gummi bears chocolate bar unerdwear.com I love. I love bear claw pie cake I love cotton candy powder.',
+	89,
+	'S003.jpg',
+	'S112'
+);
+
+INSERT INTO tuoteperhe VALUES(
+	'S001',
+	'Heavy metal sohva',
+	'Rockimpaa istumista',
+	'cotton candy jujubes. I love I love powder marshmallow gummi bears c',
+	99,
+	'S001.jpg',
+	'S112'
+);
+
+INSERT INTO tuoteperhe VALUES(
+	'S004',
+	'Ainosohvat',
+	'ainosohvat.jpg'
+,
+	'S112'
+);
+
+
+INSERT INTO tuoteperhe VALUES(
+	'SA12',
+	'Ainosohvat',
+	'ainosohvat.jpg'
+);
+
+
+
+CREATE TABLE tuote(
+	tuoteid CHAR(8),
+	tuotenimi TEXT,
+	tuoteperheid CHAR(4),
+	tuoteryhmaid CHAR(4),
+	hinta DECIMAL,
+	saldotyyppi TEXT,
+	saldo INT,
+	kuvaurl TEXT,
+	FOREIGN KEY(tuoteperheid) REFERENCES tuoteperhe(tuoteperheid),
+	FOREIGN KEY(tuoteryhmaid) REFERENCES tuoteryhma(tuoteryhmaid),
+	PRIMARY KEY(tuoteid)
+	
+);
+	
+
+
+INSERT INTO tuote VALUES(
+	'12345678',
+	'testi1',
+	'SA12',
+	'S112',
+	100,
+	'saldottyppi',
+	1,
+	'tulip.jpg'
+	
+);
+	
+
+
+
+INSERT INTO tuote VALUES(
+	'S101',
+	'heavy metal musta ',
+	'S001',
+	'S112',
+	99,
+	'saldottyppi',
+	1,
+	'S101.jpg'
+	
+);
+
+
+INSERT INTO tuote VALUES(
+	'S201',
+	'heavymetal haalea',
+	'S001',
+	'S112',
+	99,
+	'saldottyppi',
+	1,
+	'S201.jpg'
+	
+);
+
+INSERT INTO tuote VALUES(
+	'S301',
+	'heavy metal darak',
+	'S001',
+	'S112',
+	99,
+	'saldottyppi',
+	1,
+	'S301.jpg'
+	
+);
+	
+
