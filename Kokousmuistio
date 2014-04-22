@@ -33,3 +33,9 @@ Tuotteiden tarvittava SQL syötetty Marikan phpMyAdminiin
 15.4.2014
 Tuoteet mallisivun toiminnallisuus kuosissa ja osittain myös tuotesivun.(jenna & eeva)
 Rekisteröityminen toimintaan (marika)
+
+16.4.2014 Ile tuli apuun ostoskorin kanssa, saatiin tilatut ostokset lomakkeeseen, mutta ajax kikkailu jäi uupumaan (eeva,jenna ja mari tuli lopussa apuun)
+
+21.4.2014 Ostoskorisäätöä lisää Marin luona. Saatiin ajax-toimimaan ostosten lkm:n näyttämisessä! (mari, jenna, eeva)
+
+22.4.2014 ostoskorin tuotteet saadaan tulostettua sivulle ja ostoskorin tyhjennys toimii (eeva, jenna)
